@@ -1,10 +1,16 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { Container } from './styles';
 
 import Logo from '../../assets/logo.svg';
+
+const styleHighlight = {
+  borderBottom: '2px solid #ff872c',
+  fontWeight: 600,
+  opacity: 1,
+};
 
 interface HeaderProps {
   size?: 'small' | 'large';
@@ -15,9 +21,12 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        {
-          // Todo
-        }
+        <NavLink to="/" exact activeStyle={styleHighlight}>
+          Listagem
+        </NavLink>
+        <NavLink to="/import" activeStyle={styleHighlight}>
+          Importar
+        </NavLink>
       </nav>
     </header>
   </Container>

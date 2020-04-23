@@ -20,6 +20,11 @@ export const Container = styled.div<ContainerProps>`
       a {
         color: #fff;
         text-decoration: none;
+
+        padding-bottom: 1em;
+        font-weight: 500px;
+        opacity: 0.8;
+
         font-size: 16px;
         transition: opacity 0.2s;
 
@@ -33,4 +38,13 @@ export const Container = styled.div<ContainerProps>`
       }
     }
   }
+`;
+
+export const Highlighter = styled.span`
+  position: absolute;
+  width: 73px;
+  height: 2px;
+  left: 1000px;
+  top: 69px;
+  background: #ff872c;
 `;
